@@ -16,7 +16,16 @@
  */
 // write your code here
 
+var daysOfTheWeek = [
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday"]
 
+for day in daysOfTheWeek {
+        print (day)
+    }
 
 
 
@@ -29,6 +38,17 @@
 
 
 
+let numDaysOfTheWeek = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+]
+
+for (index, day) in numDaysOfTheWeek.enumerate() {
+        print("Day number \(index + 1) is \(day)")
+    }
 
 
 
@@ -37,6 +57,17 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 // write your code here
+
+
+
+var emptyArray: [String] = []
+
+if emptyArray.isEmpty {
+        print("It's empty")
+    } else {
+        print("Array not empty")
+    }
+
 
 
 
@@ -53,6 +84,13 @@
 
 
 
+var reverseEmptyArray: [String] = []
+
+if !reverseEmptyArray.isEmpty {
+        print("Array with Items")
+    } else {
+       print("Empty Array")
+    }
 
 
 
@@ -65,7 +103,7 @@
 
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -77,6 +115,12 @@
 
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
+
+for (index, day) in daysOfTheWeek.enumerate() {
+       print("Day number in order: \(index + 1) is \(day)")
+    }
 
 
 
@@ -87,6 +131,8 @@
 // write your code here
 
 
+daysOfTheWeek.removeAtIndex(6)
+daysOfTheWeek.insert("Sunday",atIndex:0)
 
 
 
@@ -101,7 +147,9 @@
 
 
 
-
+for (index, day) in daysOfTheWeek.enumerate() {
+        daysOfTheWeek[index] = day.lowercaseString
+    }
 
 
 
@@ -114,5 +162,11 @@
 
 
 
+if daysOfTheWeek.count > 5 {
+        daysOfTheWeek.removeAtIndex(0)
+           daysOfTheWeek.removeAtIndex(5)
+    } else {
+        print("No Weekend")
+    }
 
 //: Check here on the solution branch for a link to the solutions
